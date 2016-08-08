@@ -1,0 +1,16 @@
+<%= form_for @user, url: full_registration_path, as: :user do |f| %>
+  <%= f.text_field :email %>
+  <%= f.object.errors_for :email %>
+
+  <%= f.text_field :password %>
+  <%= f.object.errors_for :password %>
+
+  <%= f.text_field :password_confirmation %>
+  <%= f.object.errors_for :password_confirmation %>
+
+  <%= f.text_field :date_of_birth %>
+  <%= f.object.errors_for :date_of_birth %>
+
+  <%= f.check_box :terms_accepted %>
+  <%= f.object.errors_for :terms_accepted %>
+<% end %>

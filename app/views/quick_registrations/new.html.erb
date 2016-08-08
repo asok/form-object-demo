@@ -1,0 +1,10 @@
+<%= form_for @user, url: quick_registration_path, as: :user do |f| %>
+  <%= f.text_field :email %>
+  <%= f.object.errors_for :email %>
+
+  <%= f.text_field :password %>
+  <%= f.object.errors_for :password %>
+
+  <%= f.text_field :password_confirmation %>
+  <%= f.object.errors_for :password_confirmation %>
+<% end %>
